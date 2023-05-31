@@ -1,9 +1,13 @@
 <script setup lang="ts">
-
+import ShopProductsList from "@/views/ShopProductsList.vue";
+import ShopHeader from "@/components/ShopHeader.vue";
 </script>
 
 <template>
+  <shop-header></shop-header>
+  <shop-products-list>
 
+  </shop-products-list>
 </template>
 
 <style scoped>

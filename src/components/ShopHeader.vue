@@ -1,5 +1,4 @@
 <template>
-  <v-layout>
     <v-app-bar
         color="primary"
         density="compact"
@@ -18,7 +17,6 @@
         </v-btn>
       </template>
     </v-app-bar>
-  </v-layout>
 </template>
 
 <script>

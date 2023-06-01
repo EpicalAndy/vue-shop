@@ -4,5 +4,6 @@ export interface Product_model {
   "description": string,
   "category": number,
   "price": number,
-  "sale": number
+  "sale": number,
+  "img_urls": Array<string>
 }

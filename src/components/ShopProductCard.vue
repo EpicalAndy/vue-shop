@@ -1,47 +1,32 @@
 <template>
   <v-card
-      class="mx-auto"
-      max-width="344"
-  >
-    <v-img
-        src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-        height="200px"
-        cover
-    ></v-img>
+      class="mx-2"
+      width="250">
+    <shop-img-slider :urls="props.product?.img_urls"></shop-img-slider>
 
     <v-card-title>
-      Top western road trips
+      {{ product?.name }}
     </v-card-title>
 
     <v-card-subtitle>
-      1,000 miles of wonder
+      {{ product?.price || '999999' }} <span v-html="config.currency"></span>
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn
-          color="orange-lighten-2"
-          variant="text"
-      >
-        Explore
-      </v-btn>
-
       <v-spacer></v-spacer>
 
       <v-btn
-          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-          @click="show = !show"
-      ></v-btn>
+          :icon="showDetail ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+          @click="showDetail = !showDetail">
+      </v-btn>
     </v-card-actions>
 
     <v-expand-transition>
-      <div v-show="show">
+      <div v-show="showDetail">
         <v-divider></v-divider>
 
         <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't
-          have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll
-          go with that data file! Hey, you add a one and two zeros to that or we walk! You're going
-          to do his laundry? I've got to find a way to escape.
+          {{ product?.description }}
         </v-card-text>
       </div>
     </v-expand-transition>
@@ -49,9 +34,16 @@
 </template>
 
 <script setup lang="ts">
-import type { Product } from '@/models/product_model'
+import type { Product_model } from '@/models/product_model'
+import type { PropType } from "vue";
+import { ref } from "vue";
+import { useCommon } from "@/stores/common";
+import ShopImgSlider from "@/components/ShopImgSlider.vue";
 
-let product: Product;
+const showDetail = ref(false);
+const config = useCommon();
+const props = defineProps({ product: { type: Object as PropType<Product_model> } });
+
 </script>
 
 <style scoped>

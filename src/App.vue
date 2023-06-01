@@ -4,10 +4,12 @@ import ShopHeader from "@/components/ShopHeader.vue";
 </script>
 
 <template>
-  <shop-header></shop-header>
-  <shop-products-list>
+  <v-layout>
+    <shop-header></shop-header>
+    <shop-products-list>
 
-  </shop-products-list>
+    </shop-products-list>
+  </v-layout>
 </template>
 
 <style scoped>

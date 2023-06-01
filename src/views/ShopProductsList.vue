@@ -1,19 +1,16 @@
 <template>
-  <v-layout>
-    <v-main>
-      <v-container fluid>
-        <v-row dense>
-          <v-col
-              v-for="n in 8"
-              :key="n"
-              cols="3"
-          >
-            <shop-product-card></shop-product-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
-  </v-layout>
+  <v-main>
+    <v-container fluid>
+      <v-row dense>
+        <shop-product-card v-for="product in products.products"
+                           :key="product.id"
+                           :product="product"
+        >
+
+        </shop-product-card>
+      </v-row>
+    </v-container>
+  </v-main>
 
 
 </template>
@@ -22,13 +19,15 @@
 import ShopProductCard from "@/components/ShopProductCard.vue";
 import { useProducts } from "@/stores/products";
 import type { Product_model } from "@/models/product_model";
-const products: Product_model[] = useProducts();
 
-async function getProducts() {
-  await products.getProducts();
+const products = useProducts();
+
+function getProducts() {
+  products.getProducts();
 }
 
 getProducts();
+
 </script>
 
 <style scoped>

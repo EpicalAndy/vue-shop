@@ -9,9 +9,14 @@ export const useProducts = defineStore('products', {
   }),
   actions: {
     async getProducts() {
-      const products = await instance.get('src/demo/products._demo.json');
+      const products = await instance.get('src/demo/products_demo.json');
 
       this.products  = products?.data || [];
+    },
+    filterProducts(ids: Array<number>) {
+      return ids.length ?  this.products.filter(item => {
+        return ids.indexOf(item.id) > -1;
+      }) : this.products;
     }
   }
 })

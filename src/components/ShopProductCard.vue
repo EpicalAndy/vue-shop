@@ -1,6 +1,6 @@
 <template>
   <v-card
-      class="mx-2"
+      class="mx-2 mt-4"
       width="250">
     <shop-img-slider :urls="props.product?.img_urls"></shop-img-slider>
 

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Продукт 1",
+    "description": "Качественная вешь. Рекомендуем",
+    "category": 1,
+    "price": 100,
+    "sale": 10,
+    "img_urls": ["src/assets/img/f1-1.jpg", "src/assets/img/f1-2.jpg", "src/assets/img/f1-3.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Продукт 2",
+    "description": "Хорошая вешь. Не пожалеете",
+    "category": 1,
+    "price": 200,
+    "sale": 0,
+    "img_urls": ["src/assets/img/f2-1.jpg", "src/assets/img/f2-2.jpg", "src/assets/img/f2-3.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Продукт 3",
+    "description": "Не плохая вешь. Со своими функциями справляется",
+    "category": 1,
+    "price": 500,
+    "sale": 0,
+    "img_urls": ["src/assets/img/f3-1.jpg", "src/assets/img/f3-2.jpg", "src/assets/img/f3-3.jpg", "src/assets/img/f3-4.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Продукт 4",
+    "description": "Интересная вешь. Новинка",
+    "category": 1,
+    "price": 500,
+    "sale": 0,
+    "img_urls": ["src/assets/img/f4-1.jpg", "src/assets/img/f4-2.jpg", "src/assets/img/f4-3.jpg"]
+  },
+  {
+    "id": 1,
+    "name": "Продукт 1",
+    "description": "Качественная вешь. Рекомендуем",
+    "category": 2,
+    "price": 1200,
+    "sale": 10,
+    "img_urls": ["src/assets/img/hp1-1.jpg", "src/assets/img/hp1-2.jpg", "src/assets/img/hp1-3.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Продукт 2",
+    "description": "Хорошая вешь. Не пожалеете",
+    "category": 2,
+    "price": 5000,
+    "sale": 0,
+    "img_urls": ["src/assets/img/hp2-1.jpg", "src/assets/img/hp2-2.jpg", "src/assets/img/hp2-3.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Продукт 3",
+    "description": "Не плохая вешь. Со своими функциями справляется",
+    "category": 2,
+    "price": 2500,
+    "sale": 0,
+    "img_urls": ["src/assets/img/hp3-1.jpg", "src/assets/img/hp3-2.jpg", "src/assets/img/hp3-3.jpg", "src/assets/img/hp3-4.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Продукт 4",
+    "description": "Интересная вешь. Новинка",
+    "category": 2,
+    "price": 1500,
+    "sale": 0,
+    "img_urls": ["src/assets/img/hp4-1.jpg", "src/assets/img/hp4-2.jpg", "src/assets/img/hp4-3.jpg"]
+  }
+]

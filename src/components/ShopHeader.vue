@@ -3,13 +3,16 @@
       color="primary"
       density="compact">
     <template v-slot:prepend>
+      <v-btn to="/" rounded>
+        <v-icon size="large">mdi-home</v-icon>
+      </v-btn>
       <v-app-bar-nav-icon @click="showMemu = !showMemu"></v-app-bar-nav-icon>
     </template>
 
     <v-app-bar-title>Фильтры</v-app-bar-title>
 
     <template v-slot:append>
-      <v-btn rounded>
+      <v-btn rounded to="/cart">
         <v-badge content="2"
                  color="error"
                  offset-x="-2"

@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import ShopProductsList from "@/views/ShopProductsList.vue";
+import ShopProductsList from "@/views/ShopProductsListView.vue";
 import ShopHeader from "@/components/ShopHeader.vue";
 </script>
 
 <template>
   <v-layout>
     <shop-header></shop-header>
-    <shop-products-list>
+    <router-view></router-view>
 
-    </shop-products-list>
   </v-layout>
 </template>
 

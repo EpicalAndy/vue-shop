@@ -13,7 +13,7 @@
 
     <template v-slot:append>
       <v-btn rounded to="/cart">
-        <v-badge content="2"
+        <v-badge :content="cart.allProductsCount"
                  color="error"
                  offset-x="-2"
                  offset-y="-2">
@@ -41,10 +41,12 @@
 import { ref } from "vue";
 import { useCategories } from "@/stores/categories";
 import { onBeforeMount } from "vue";
+import { useCart } from "@/stores/cart";
 
 const showMemu = ref(false);
 const categories = useCategories();
 const selectedCategories = ref([]);
+const cart = useCart();
 function getCategories() {
   categories.getCategories();
 }

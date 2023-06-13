@@ -1,10 +1,5 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="8"></v-col>
-      <v-col cols="4"></v-col>
-    </v-row>
-
     <v-card>
       <v-card-title class="text-center">Заказ</v-card-title>
       <v-table>
@@ -29,6 +24,7 @@
 import ShopProductCard from "@/components/ShopProductCard.vue";
 import type { Product_model } from "@/models/product_model";
 import { useCart } from "@/stores/cart";
+import ShopProductList from "@/components/ShopProductList.vue";
 
 const cart = useCart();
 

@@ -11,12 +11,15 @@ export const useProducts = defineStore('products', {
     async getProducts() {
       const products = await instance.get('src/demo/products_demo.json');
 
-      this.products  = products?.data || [];
+      this.products = products?.data || [];
     },
     filterProducts(ids: Array<number>) {
-      return ids.length ?  this.products.filter(item => {
+      return ids.length ? this.products.filter(item => {
         return ids.indexOf(item.id) > -1;
       }) : this.products;
+    },
+    getProduct(id: number) {
+      return this.products.find(item => item.id === id);
     }
   }
 })

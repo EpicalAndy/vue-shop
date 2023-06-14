@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Продукт 1",
+    "name": "Фен 1",
     "description": "Качественная вешь. Рекомендуем",
     "category": 1,
     "price": 100,
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "name": "Продукт 2",
+    "name": "Фен 2",
     "description": "Хорошая вешь. Не пожалеете",
     "category": 1,
     "price": 200,
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "name": "Продукт 3",
+    "name": "Фен 3",
     "description": "Не плохая вешь. Со своими функциями справляется",
     "category": 1,
     "price": 500,
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Продукт 4",
+    "name": "Фен 4",
     "description": "Интересная вешь. Новинка",
     "category": 1,
     "price": 500,
@@ -36,8 +36,8 @@
     "img_urls": ["src/assets/img/f4-1.jpg", "src/assets/img/f4-2.jpg", "src/assets/img/f4-3.jpg"]
   },
   {
-    "id": 1,
-    "name": "Продукт 1",
+    "id": 5,
+    "name": "Наушники 1",
     "description": "Качественная вешь. Рекомендуем",
     "category": 2,
     "price": 1200,
@@ -45,8 +45,8 @@
     "img_urls": ["src/assets/img/hp1-1.jpg", "src/assets/img/hp1-2.jpg", "src/assets/img/hp1-3.jpg"]
   },
   {
-    "id": 2,
-    "name": "Продукт 2",
+    "id": 6,
+    "name": "Наушники 2",
     "description": "Хорошая вешь. Не пожалеете",
     "category": 2,
     "price": 5000,
@@ -54,8 +54,8 @@
     "img_urls": ["src/assets/img/hp2-1.jpg", "src/assets/img/hp2-2.jpg", "src/assets/img/hp2-3.jpg"]
   },
   {
-    "id": 3,
-    "name": "Продукт 3",
+    "id": 7,
+    "name": "Наушники 3",
     "description": "Не плохая вешь. Со своими функциями справляется",
     "category": 2,
     "price": 2500,
@@ -63,12 +63,48 @@
     "img_urls": ["src/assets/img/hp3-1.jpg", "src/assets/img/hp3-2.jpg", "src/assets/img/hp3-3.jpg", "src/assets/img/hp3-4.jpg"]
   },
   {
-    "id": 4,
-    "name": "Продукт 4",
+    "id": 8,
+    "name": "Наушники 4",
     "description": "Интересная вешь. Новинка",
     "category": 2,
     "price": 1500,
     "sale": 0,
     "img_urls": ["src/assets/img/hp4-1.jpg", "src/assets/img/hp4-2.jpg", "src/assets/img/hp4-3.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Самокат 1",
+    "description": "Качественная вешь. Рекомендуем",
+    "category": 2,
+    "price": 1200,
+    "sale": 10,
+    "img_urls": ["src/assets/img/s1-1.jpg", "src/assets/img/s1-2.jpg", "src/assets/img/s1-3.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "Самокат 2",
+    "description": "Хорошая вешь. Не пожалеете",
+    "category": 2,
+    "price": 5000,
+    "sale": 0,
+    "img_urls": ["src/assets/img/s2-1.jpg", "src/assets/img/s2-2.jpg", "src/assets/img/s2-3.jpg"]
+  },
+  {
+    "id": 11,
+    "name": "Самокат 3",
+    "description": "Не плохая вешь. Со своими функциями справляется",
+    "category": 2,
+    "price": 2500,
+    "sale": 0,
+    "img_urls": ["src/assets/img/s3-1.jpg", "src/assets/img/s3-2.jpg", "src/assets/img/s3-3.jpg"]
+  },
+  {
+    "id": 12,
+    "name": "Самокат 4",
+    "description": "Интересная вешь. Новинка",
+    "category": 2,
+    "price": 1500,
+    "sale": 0,
+    "img_urls": ["src/assets/img/s4-1.jpg", "src/assets/img/s4-2.jpg", "src/assets/img/s4-3.jpg"]
   }
 ]

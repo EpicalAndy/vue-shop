@@ -9,7 +9,7 @@
       </v-card-text>
     <v-btn-group class="d-flex justify-space-between">
       <v-btn>Заказать</v-btn>
-      <v-btn>Очистить</v-btn>
+      <v-btn @click="cart.removeAllProducts()">Очистить</v-btn>
     </v-btn-group>
   </v-card>
 </template>

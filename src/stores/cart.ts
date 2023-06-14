@@ -57,6 +57,9 @@ export const useCart = defineStore('cart', {
         count: 1
       });
     },
+    removeAllProducts() {
+      this.products = [];
+    },
     getProductInCart(productId: number) {
       return this.products.find(product => product.productId === productId) || null;
     },

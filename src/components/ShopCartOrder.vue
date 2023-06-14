@@ -1,7 +1,7 @@
 <template>
   <v-card class="shop-cart-order mx-2 mt-4">
-    <v-toolbar>
-      <v-toolbar-title>Заказ</v-toolbar-title>
+    <v-toolbar density="compact">
+      <v-toolbar-title >Заказ</v-toolbar-title>
     </v-toolbar>
       <v-card-text>Количество: {{ cart.allProductsCount }}</v-card-text>
       <v-card-text>

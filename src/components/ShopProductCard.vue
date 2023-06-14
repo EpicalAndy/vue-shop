@@ -7,16 +7,30 @@
       {{ product?.name }}
     </v-card-title>
     <v-row>
-      <v-col cols="8">
+      <v-col cols="6">
         <v-card-subtitle>
-      {{ product?.price || '999999' }} <span v-html="config.currency"></span>
-    </v-card-subtitle>
+          {{ product?.price || '0' }} <span v-html="config.currency"></span>
+        </v-card-subtitle>
       </v-col>
 
-      <v-col cols="4">
-        <v-btn @click="addToCart">
-          <v-icon size="large">mdi-plus</v-icon>
+      <v-col cols="6">
+        <!--          <v-btn>
+                    <v-icon size="large">mdi-minus</v-icon>
+                  </v-btn>-->
+        <v-btn @click="addToCart"
+               v-if="!cart.isProductInCart(product.id)"
+               density="compact">
+          <v-icon size="large">
+            mdi-plus
+          </v-icon>
         </v-btn>
+        <v-card-subtitle v-else
+                         class="font-weight-bold bg-green-lighten-1 rounded"
+                         color="primary">
+          В корзине!
+        </v-card-subtitle>
+
+
       </v-col>
     </v-row>
 

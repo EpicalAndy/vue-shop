@@ -1,23 +1,15 @@
 <template>
-  <v-container>
-    <v-card>
-      <v-card-title class="text-center">Заказ</v-card-title>
-      <v-table>
-        <thead>
-        <tr>
-          <th>Название</th>
-          <th>Количество</th>
-          <th>Общая цена</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="product in cart.products"
-            :key="product.product.id">
-        </tr>
-        </tbody>
-      </v-table>
-    </v-card>
-  </v-container>
+  <v-card class="shop-cart-order">
+    <v-toolbar>
+      <v-toolbar-title>Заказ</v-toolbar-title>
+    </v-toolbar>
+      <v-card-text>Количество: {{ cart.allProductsCount }}</v-card-text>
+      <v-card-text>Стоимость: {{ cart.totalCost }} <span v-html="config.currency"></span></v-card-text>
+    <v-btn-group class="d-flex justify-space-between">
+      <v-btn>Заказать</v-btn>
+      <v-btn>Очистить</v-btn>
+    </v-btn-group>
+  </v-card>
 </template>
 
 <script setup lang="ts">
@@ -25,12 +17,16 @@ import ShopProductCard from "@/components/ShopProductCard.vue";
 import type { Product_model } from "@/models/product_model";
 import { useCart } from "@/stores/cart";
 import ShopProductList from "@/components/ShopProductList.vue";
+import { useCommon } from "@/stores/common";
 
 const cart = useCart();
+const config = useCommon();
 
 
 </script>
 
 <style scoped>
-
+  .shop-cart-order {
+    width: 240px;
+  }
 </style>

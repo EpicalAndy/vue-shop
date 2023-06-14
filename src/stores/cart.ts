@@ -21,6 +21,21 @@ export const useCart = defineStore('cart', {
     },
     productsList: (state) => {
       return  state.products.map(product => product.product);
+    },
+    totalCost: (state): number => {
+      const products = state.products;
+
+      let cost = 0;
+
+      if (!products.length) {
+        return cost;
+      }
+
+      products.forEach(product => {
+        cost += product.count * product.product.price;
+      });
+
+      return cost
     }
   },
   actions: {

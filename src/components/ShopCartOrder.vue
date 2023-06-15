@@ -1,5 +1,5 @@
 <template>
-  <v-card class="shop-cart-order mx-2 mt-4">
+  <v-card class="shop-cart-order">
     <v-toolbar density="compact">
       <v-toolbar-title >Заказ</v-toolbar-title>
     </v-toolbar>

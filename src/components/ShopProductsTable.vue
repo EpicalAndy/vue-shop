@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-data-table :headers="headers"
-                  :items="products"
+                  :items="_products"
                   :disable-pagination="true"
                   :footer-props="{ disablePagination: true, disableItemsPerPage : true }">
       <template v-slot:item="{ item }" :key="item.selectable.id">
@@ -28,9 +28,11 @@
 <script setup lang="ts">
 import { VDataTable } from 'vuetify/labs/VDataTable'
 import * as events from "events";
+import { computed } from "vue";
 
 const { products, headers } = defineProps<{ products: any[], headers: any[] }>();
 const emits = defineEmits([ 'UpdateCartProduct' ]);
+const _products = computed(() => products);
 
 function updateCount(item: VDataTable, ev: InputEvent) {
   const target = ev.target as HTMLInputElement;

@@ -73,7 +73,6 @@ export const useCart = defineStore('cart', {
       this.products = [];
     },
     removeProduct(id: number) {
-      debugger
       this.products = this.products.filter(product => product.productId !== id)
     },
     getProductInCart(productId: number) {

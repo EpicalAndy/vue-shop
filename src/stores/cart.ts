@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import type { Product_model } from "@/models/product_model";
 import type { Cart_model } from "@/models/cart_model";
 import { useProducts } from "@/stores/products";
+import { de } from "vuetify/locale";
 
 export const useCart = defineStore('cart', {
   state: () => ({
@@ -20,7 +21,7 @@ export const useCart = defineStore('cart', {
       return count;
     },
     productsList: (state) => {
-      return  state.products.map(product => product.product);
+      return state.products.map(product => product.product);
     },
     totalCost: (state): number => {
       const products = state.products;
@@ -57,8 +58,23 @@ export const useCart = defineStore('cart', {
         count: 1
       });
     },
+    updateProductInCart(item: Cart_model) {
+      const productId = item.productId
+      const product = this.getProductInCart(productId);
+
+      if (!product) {
+        return;
+      }
+
+      item.count > 0 ? Object.assign(product, item) :
+        this.removeProduct(productId);
+    },
     removeAllProducts() {
       this.products = [];
+    },
+    removeProduct(id: number) {
+      debugger
+      this.products = this.products.filter(product => product.productId !== id)
     },
     getProductInCart(productId: number) {
       return this.products.find(product => product.productId === productId) || null;

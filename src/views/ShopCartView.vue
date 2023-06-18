@@ -7,14 +7,14 @@
 <!--            <shop-product-list :products="cart.productsList"></shop-product-list>-->
 
             <shop-products-table :headers="tableHeaders"
-                                 :products="talbeData">
+                                 v-model:products="talbeData"
+                                  @update-cart-product="updateProductCount">
             </shop-products-table>
           </v-col>
 
           <v-col cols="6">
             <shop-cart-order></shop-cart-order>
           </v-col>
-
         </template>
         <template v-else>
           <v-alert-title>В корзине ничего нет</v-alert-title>
@@ -43,9 +43,18 @@ const tableHeaders = [
 ];
 const talbeData = computed(() => {
   return products.map(item => {
-    return { name: item.product.name, price: item.product.price, count: item.count }
+    return { name: item.product.name, price: item.product.price, count: item.count, productId: item.productId }
   });
 })
+
+function updateProductCount(item, value) {
+  let _val = Number.isInteger(+value) ? +value : 1 ;
+  const _item = Object.assign({}, item.raw)
+
+  _item.count = _val;
+
+  cart.updateProductInCart(_item);
+}
 
 </script>
 
